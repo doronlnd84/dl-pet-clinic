@@ -1,4 +1,4 @@
-package dani.springframework.dlpetclinic;
+package dani.springFramework.dlpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

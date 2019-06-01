@@ -1,4 +1,4 @@
-package model;
+package dani.springFramework.dlpetclinic.model;
 
 public class PetType {
     private String name;
