@@ -4,7 +4,7 @@
     <packaging>pom</packaging>
     <groupId>dani.springframework</groupId>
     <artifactId>dl-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>dl-pet-clinic</name>
     <description>My dl-pet-clinic followed Guru</description>
 
@@ -43,6 +43,6 @@
 <developerConnection>
     scm:git:https://github.com/doronlnd84/dl-pet-clinic.git
 </developerConnection>
-  <tag>dl-pet-clinic-0.0.2</tag>
+  <tag>HEAD</tag>
   </scm>
 </project>
