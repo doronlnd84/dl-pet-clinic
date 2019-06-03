@@ -40,5 +40,9 @@
 
     </plugins>
  </build>
-
+<scm>
+<developerConnection>
+    scm:git:https://github.com/doronlnd84/dl-pet-clinic.git
+</developerConnection>
+</scm>
 </project>

@@ -17,7 +17,7 @@ Set<T> findAll(){
         return map.get(id);
     }
     T save(ID id,T object) {
-        map.put(id,object);
+       return map.put(id,object);
     }
 
     void deleteById(ID id){
