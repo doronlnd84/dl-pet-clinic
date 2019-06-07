@@ -2,9 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List of vets</title>
 </head>
 <body>
-<h1 th:text="'Index Page'">Index Page</h1>
+<!--/*@thymesVar id="vet" type="dani.springFramework.dlpetclinic.model.Vet"*/-->
+<h1 th:text="'List of vets'">vet list..</h1>
+
+<h2 >BLA BLA BLA</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>First name</th>
+        <th>last name___</th>
+    </tr>
+<!--    <tr th:each="vet : ${vets}">-->
+<!--        <td th:text="${vet.firstName}"></td>-->
+<!--        <td th:text="${vet.firstName}"></td>-->
+<!--        <td th:text="${vet.lastName}"></td>-->
+<!--    </tr>-->
+</table>
+
 </body>
 </html>
