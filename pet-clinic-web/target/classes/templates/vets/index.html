@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of vets</title>
+</head>
+<body>
+<!--/*@thymesVar id="vet" type="dani.springFramework.dlpetclinic.model.vet"*/-->
+<h1 th:text="'List of vet'">vet list..</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>First name</th>
+        <th>last name</th>
+    </tr>
+    <tr th:each="vet : ${vets}">
+        <td th:text="${vet.id}"></td>
+        <td th:text="${vet.firstName}"></td>
+        <td th:text="${vet.lastName}"></td>
+    </tr>
+</table>
+</body>
+</html>
