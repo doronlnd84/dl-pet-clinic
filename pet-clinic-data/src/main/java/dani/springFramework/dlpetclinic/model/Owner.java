@@ -3,6 +3,22 @@ package dani.springFramework.dlpetclinic.model;
 import java.util.Set;
 
 public class Owner extends Person {
+
+
+    private String address;
+    private String city;
+    private String telephone;
+    private Set<Pet> pets;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
     public Set<Pet> getPets() {
         return pets;
     }
@@ -10,5 +26,4 @@ public class Owner extends Person {
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
     }
-    private Set<Pet> pets;
 }
