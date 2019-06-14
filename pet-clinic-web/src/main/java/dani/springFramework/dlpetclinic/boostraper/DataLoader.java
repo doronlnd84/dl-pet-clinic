@@ -1,10 +1,10 @@
 package dani.springFramework.dlpetclinic.boostraper;
 
-import dani.springFramework.dlpetclinic.map.OwnerServiceMap;
-import dani.springFramework.dlpetclinic.map.VetServiceMap;
 import dani.springFramework.dlpetclinic.model.Owner;
+import dani.springFramework.dlpetclinic.model.PetType;
 import dani.springFramework.dlpetclinic.model.Vet;
 import dani.springFramework.dlpetclinic.services.OwnerService;
+import dani.springFramework.dlpetclinic.services.PetTypeService;
 import dani.springFramework.dlpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -14,16 +14,24 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService,VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
 
          this.ownerService = ownerService;
         this.vetService = vetService;
-
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType SavedPetTypeDog = petTypeService.save(dog);
+        PetType SavedPetTypeCat = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Danniel");
