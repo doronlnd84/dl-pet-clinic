@@ -2,12 +2,22 @@ package dani.springFramework.dlpetclinic.map;
 
 import dani.springFramework.dlpetclinic.model.Owner;
 import dani.springFramework.dlpetclinic.services.OwnerService;
+import dani.springFramework.dlpetclinic.services.PetService;
+import dani.springFramework.dlpetclinic.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
+    private final PetService petService;
+    private final PetTypeService petTypeService;
+
+    public OwnerServiceMap( PetTypeService petTypeService,PetService petService) {
+        this.petService = petService;
+        this.petTypeService = petTypeService;
+    }
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -25,6 +35,26 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public Owner save(Owner object) {
+
+        if(object != null){
+            if(object.getPets() != null){
+                object.getPets().forEach(pet-> {
+                    if(pet.getPetType() != null) {
+                        if (pet.getPetType().getId() == null) {
+                            pet.setPetType(petTypeService.save(pet.getPetType()));
+                        }
+                    }
+                    else{
+                        throw new RuntimeException("Pettype is required");
+                    }
+                    if(pet.getId() == null){
+                       pet.setId(petService.save(pet).getId()) ;
+                    }
+                        }
+
+                        );
+            }
+        }
         return super.save(object);
     }
 

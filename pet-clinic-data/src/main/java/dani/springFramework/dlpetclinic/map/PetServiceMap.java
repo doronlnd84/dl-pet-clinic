@@ -2,12 +2,13 @@ package dani.springFramework.dlpetclinic.map;
 
 import dani.springFramework.dlpetclinic.model.Pet;
 import dani.springFramework.dlpetclinic.services.CrudService;
+import dani.springFramework.dlpetclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
