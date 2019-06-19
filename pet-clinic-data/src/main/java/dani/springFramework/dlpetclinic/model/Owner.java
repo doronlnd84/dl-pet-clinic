@@ -1,11 +1,21 @@
 package dani.springFramework.dlpetclinic.model;
 
+import javax.persistence.*;
 import java.util.Set;
 
+@Entity
+@Table(name="owners")
 public class Owner extends Person {
 
-
+    @Column(name="address")
     private String address;
+
+    @Column(name="city")
+    private String city;
+    @Column(name="telephone")
+    private String telephone;
+    @OneToMany(cascade =CascadeType.ALL,mappedBy = "owner")
+    private Set<Pet> pets;
 
     public String getCity() {
         return city;
@@ -15,9 +25,6 @@ public class Owner extends Person {
         this.city = city;
     }
 
-    private String city;
-    private String telephone;
-    private Set<Pet> pets;
 
     public String getAddress() {
         return address;
