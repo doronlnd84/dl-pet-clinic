@@ -8,6 +8,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Specialty")
 public class Specialty extends BaseEntity {
+
+    @Column(name="description")
+    private  String description;
+
     public String getDescription() {
         return description;
     }
@@ -16,6 +20,5 @@ public class Specialty extends BaseEntity {
         this.description = description;
     }
 
-    @Column(name="description")
-    private  String description;
+
 }

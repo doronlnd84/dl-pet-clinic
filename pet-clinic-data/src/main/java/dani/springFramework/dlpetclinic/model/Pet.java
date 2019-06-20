@@ -21,8 +21,6 @@ public class Pet extends BaseEntity {
     @JoinColumn(name="type_id")
     private PetType  petType;
 
-
-
     @OneToMany(cascade =CascadeType.ALL,mappedBy = "pet")
     private Set<Visit> visits = new HashSet();
 

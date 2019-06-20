@@ -94,7 +94,7 @@ public class DataLoader implements CommandLineRunner {
         petSet = new HashSet<>();
         petSet.add(nisimsPet);
         owner2.setPets(petSet);
-
+System.out.println();
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Dr");
