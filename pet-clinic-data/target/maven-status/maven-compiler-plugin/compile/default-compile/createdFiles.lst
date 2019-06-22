@@ -4,12 +4,15 @@ dani\springFramework\dlpetclinic\model\Visit.class
 dani\springFramework\dlpetclinic\repositories\PetRepository.class
 dani\springFramework\dlpetclinic\model\Person.class
 dani\springFramework\dlpetclinic\springdatajpa\OwnerSDJpaService.class
+dani\springFramework\dlpetclinic\springdatajpa\VetSDJpaService.class
 dani\springFramework\dlpetclinic\repositories\VetRepository.class
+dani\springFramework\dlpetclinic\springdatajpa\PetSDJpaService.class
 dani\springFramework\dlpetclinic\model\Pet.class
 dani\springFramework\dlpetclinic\services\PetService.class
 dani\springFramework\dlpetclinic\map\VetServiceMap.class
 dani\springFramework\dlpetclinic\map\PetServiceMap.class
 dani\springFramework\dlpetclinic\map\SpecialtyServiceMap.class
+dani\springFramework\dlpetclinic\services\VisitService.class
 dani\springFramework\dlpetclinic\map\OwnerServiceMap.class
 dani\springFramework\dlpetclinic\repositories\OwnerRepository.class
 dani\springFramework\dlpetclinic\services\PetTypeService.class
@@ -22,6 +25,10 @@ dani\springFramework\dlpetclinic\repositories\SpecialityRepository.class
 dani\springFramework\dlpetclinic\services\SpecialtyService.class
 dani\springFramework\dlpetclinic\services\CrudService.class
 dani\springFramework\dlpetclinic\repositories\PetTypeRepository.class
+dani\springFramework\dlpetclinic\springdatajpa\VisitSDJpaService.class
 dani\springFramework\dlpetclinic\repositories\VisitRepository.class
+dani\springFramework\dlpetclinic\springdatajpa\VetSpecialtySDJpaService.class
+dani\springFramework\dlpetclinic\map\VisitServiceMap.class
+dani\springFramework\dlpetclinic\springdatajpa\PetTypeSDJpaService.class
 dani\springFramework\dlpetclinic\services\OwnerService.class
 dani\springFramework\dlpetclinic\model\PetType.class

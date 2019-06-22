@@ -3,11 +3,17 @@ package dani.springFramework.dlpetclinic.springdatajpa;
 import dani.springFramework.dlpetclinic.model.Specialty;
 import dani.springFramework.dlpetclinic.repositories.SpecialityRepository;
 import dani.springFramework.dlpetclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+
+
+@Service
+@Profile("springdatajpa")
 public class VetSpecialtySDJpaService  implements SpecialtyService {
 
     private final SpecialityRepository specialityRepository;

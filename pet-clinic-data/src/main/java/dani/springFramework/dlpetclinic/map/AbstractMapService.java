@@ -16,13 +16,18 @@ Set<T> findAll(){
         return map.get(id);
     }
     T save(T object) {
-    if(object!=null)
-        if(object.getId() == null)
-        {
+    if(object!=null) {
+        if (object.getId() == null) {
             object.setId(getNextId());
         }
-       return map.put(object.getId(),object);
+         map.put(object.getId(), object);
+
     }
+    else{
+        throw new RuntimeException("Object cannot be null");
+        }
+    return object;
+}
 
     void deleteById(ID id){
         map.remove(id);

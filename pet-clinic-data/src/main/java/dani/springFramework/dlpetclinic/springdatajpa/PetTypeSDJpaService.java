@@ -3,11 +3,16 @@ package dani.springFramework.dlpetclinic.springdatajpa;
 import dani.springFramework.dlpetclinic.model.PetType;
 import dani.springFramework.dlpetclinic.repositories.PetTypeRepository;
 import dani.springFramework.dlpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+
+@Service
+@Profile("springdatajpa")
 public class PetTypeSDJpaService implements PetTypeService {
     private final PetTypeRepository petTypeRepository;
 

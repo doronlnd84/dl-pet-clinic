@@ -5,6 +5,7 @@ import dani.springFramework.dlpetclinic.repositories.OwnerRepository;
 import dani.springFramework.dlpetclinic.repositories.PetRepository;
 import dani.springFramework.dlpetclinic.repositories.PetTypeRepository;
 import dani.springFramework.dlpetclinic.services.OwnerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,6 @@ public class OwnerSDJpaService implements OwnerService {
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
-
 
     public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
