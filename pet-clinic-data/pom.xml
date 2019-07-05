@@ -48,7 +48,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.0.3.RELEASE</version>
+                <version>2.1.5.RELEASE</version>
                 <executions>
                     <execution>
                         <goals>
@@ -59,6 +59,18 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+<!--                        <version>${junit-jupiter.version}</version>-->
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
