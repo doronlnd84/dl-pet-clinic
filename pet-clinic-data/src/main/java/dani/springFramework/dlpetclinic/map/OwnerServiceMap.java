@@ -75,6 +75,9 @@ System.out.println("IN SAVE");
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return super.findAll().stream().filter(o->o.getLastName().equalsIgnoreCase(lastName)).
+                findFirst().orElse(null);
+
+
     }
 }
