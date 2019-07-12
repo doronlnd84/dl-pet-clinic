@@ -91,7 +91,9 @@ public class DataLoader implements CommandLineRunner {
             System.out.println("ssavelwOwner1  is NULL");
 
         }
+      Owner landau =  ownerService.findByLastName("Landau");
         Owner owner2 = new Owner();
+
 
         owner2.setFirstName("Nissim");
         owner2.setLastName("Danino");
