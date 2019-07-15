@@ -22,7 +22,7 @@
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>dani.springframework</groupId>
-            <version>0.0.3-SNAPSHOT</version>
+            <version>0.0.5-SNAPSHOT</version>
         </dependency>
 
         <dependency>
